@@ -5,13 +5,24 @@
 	</head>
 	<body>
 		<h1>Hello World</h1>
-		<video controls style="width:640px;height:360px;" poster="poster.png">
-  <source src="devstories.webm" 
-          type='video/webm;codecs="vp8, vorbis"' />
-  <source src="devstories.mp4" 
-          type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-  <track src="devstories-en.vtt" label="English subtitles" 
-         kind="subtitles" srclang="en" default></track>
+		<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
 </video>
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 	</body>
 </html>
