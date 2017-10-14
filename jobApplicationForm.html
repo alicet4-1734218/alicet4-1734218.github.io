@@ -3,11 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>Job Application</title>
+<style>
+body {
+		color: blue;
+}
+</style>
+
 </head>
 <body>
 
 <h2>Job Application</h2>
 
+<form name="Testing" action="html_form_action.asp" method="post"></form>
 <form action="http://gclass.alexburner.com/formtest.php" method="post"></form>
 
 	<fieldset>
@@ -24,6 +31,9 @@
 			<label>Repeat password:</label> 
 			<input type="password" name="password_r">
 		</div>
+		<div class="field">
+			<label>Backup Password:</label>
+			<input type="password" name="pwd">
 	</fieldset>
 
 	<fieldset>
@@ -37,12 +47,16 @@
 			<input type="text" name="firstname"><br> Last Name: <input type="text" name="lastname">
 			</div>
 		<div class="field">
-		
+			<textarea name="essay">Write one fact about yourself here.</textarea>
+		<br><input type="checkbox" name="pets" value="Dog">I have a dog<br>
+		<input type="checkbox" name="pets" value="Cat">I have a cat<br>
 		<div class="field">
-			<label>Another Password:</label>
-			<input type="password" name="pwd">
+		<label>Other (Please specify):</label>
+		<textarea name="other" rows="6" cols="60"></textarea>
+		</div>
+		<br><input type="checkbox" name="pets" value="None">I don't have any pets<br>
 		
-			<label>Street Address:</label> 
+			<br><label>Street Address:</label> 
 			<input type="text" name="street">
 		</div>
 		<div class="field">
@@ -164,7 +178,7 @@
 			</table>
 		</div>
 	</fieldset>
-
+	
 	<fieldset>
 		<legend>Personal Statement</legend>
 		<div class="field">
@@ -177,9 +191,18 @@
 		</div>
 	</fieldset>
 	
-	<textarea name="essay">Testing testing 123. Please enter your Student ID number here.</textarea>
-
+	<label>Do you know what you are doing?</label>
 	<br><input type="radio" name="answer" value="yes"> Yes<br> <input type="radio" name="answer" value="no">No
+	
+	<fieldset>
+		<legend>Job That You Want</legend>
+		<div class="field">
+			<select name="jobs"><option value="Artist">Artist</option>
+			<option value="Programmer">Programmer</option>
+			<option value="Project Manager">Project Manager</option>
+			<option value="Engineer">Engineer</option>
+		</div>
+	</fieldset>
 	
 	<br><input type="submit" value="Submit form">
 
